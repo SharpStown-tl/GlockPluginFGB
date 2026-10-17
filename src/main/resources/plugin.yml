@@ -1,0 +1,13 @@
+name: GlockPlugin
+version: 1.0.0
+main: com.example.glock.GlockPlugin
+api-version: '1.21'
+description: Glock automatica (ballesta) que dispara bolas de fuego con balas (pararrayos)
+commands:
+  glock:
+    description: Te da una Glock y balas (solo admins)
+    usage: /glock
+    permission: glock.give
+permissions:
+  glock.give:
+    default: op
