@@ -15,13 +15,7 @@ jobs:
           distribution: temurin
           java-version: '21'
           cache: maven
-      - name: Preparar los archivos del plugin subido
-        run: |
-          mkdir -p source-upload src/main/java/com/example/glock src/main/resources
-          unzip -o Glocksfiles.zip -d source-upload
-          cp source-upload/GlockPlugin.java src/main/java/com/example/glock/GlockPlugin.java
-          cp source-upload/plugin.yml src/main/resources/plugin.yml
-      - name: Compilar plugin
+      - name: Build plugin
         run: mvn -B clean package
       - uses: actions/upload-artifact@v4
         with:
